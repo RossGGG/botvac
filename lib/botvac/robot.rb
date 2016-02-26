@@ -12,6 +12,20 @@ module Botvac
       self.secret  = secret
     end
 
+    def start_cleaning
+      connection.post("messages", JSON.dump(
+        {
+          reqId: "1",
+          cmd: "startCleaning",
+          params: {
+            category: 2,
+            mode: 2,
+            modifier: 2
+          }
+        }
+      )).body
+    end
+    
     def pause_cleaning
       connection.post("messages", JSON.dump({ reqId: "1",cmd: "pauseCleaning" })).body
     end
