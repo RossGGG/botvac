@@ -11,7 +11,7 @@ module Botvac
     end
 
     def supported_actions
-      %w(start_cleaning pause_cleaning stop_cleaning send_to_base get_robot_state disable_schedule enable_schedule get_schedule)
+      %w(start_cleaning pause_cleaning resume_cleaning stop_cleaning send_to_base get_robot_state disable_schedule enable_schedule get_schedule)
     end
 
     def robot
