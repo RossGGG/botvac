@@ -1,5 +1,6 @@
 require 'thor'
 require 'botvac'
+require 'securerandom'
 
 module Botvac
   class Cli < Thor
@@ -12,7 +13,7 @@ module Botvac
       email    = ask("Email:").to_s
       password = ask("Pasword:", echo: false).to_s
 
-      self.token = connection.post('/sessions', { platform: "ios", email: email, token: SecureRandom.hex(32), password: password }).body['access_token']
+      self.token = connection.post('/sessions', { platform: "ios", email: email, token: SecureRandom.hex(32), passw$
     end
 
     desc "robots", "fetch details about you registered robots"
