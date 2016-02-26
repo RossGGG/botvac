@@ -4,8 +4,8 @@ describe Botvac::Robot::Hmac do
   subject do
     described_class.new(
       double('app', call: {}),
-      serial: "OPS39348-C0BCB237AC0F",
-      secret: "702FA35268D2792B2AAF9510B47756D8",
+      serial: "[YOUR NEATO BOTVAC CONNECTED SERIAL]",
+      secret: "[YOUR NEATO BOTVAC CONNECTED SECRET]",
     )
   end
 
